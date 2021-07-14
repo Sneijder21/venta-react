@@ -4,7 +4,7 @@ import AuthService from "./AuthService";
 const auth = new AuthService();
 
 const ApiService = axios.create({
-    base_url : 'http://localhost:8000/api',
+    baseURL : 'http://localhost:8000/api/auth',
     headers : {
         'Authorization': 'Bearer ' + auth.token(),
         'Access-Control-Allow-Origin': '*',    

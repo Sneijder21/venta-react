@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom";
 
 import login from './pages/Login/Login';
 import RouterLayout from './layout/RouteLayout';
+import HomeLayout from './layout/HomeLayout';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Redirect to="login"/>
         </Route>
         <Route exact path="/login" component={login}/>
-        <RouterLayout exact path="/admin" component={ login } />
+        <RouterLayout exact path="/admin" component={ HomeLayout } />
 
       </Switch>
     </Router>
